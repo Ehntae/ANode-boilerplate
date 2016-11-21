@@ -1,0 +1,29 @@
+{
+  "dependencies": {
+    "@types/express": "^4.0.34",
+    "@types/node": "^6.0.48",
+    "@types/socket.io": "^1.4.27",
+    "express": "^4.14.0",
+    "socket.io": "^1.6.0"
+  },
+  "devDependencies": {
+    "concurrently": "^3.1.0",
+    "nodemon": "^1.11.0",
+    "typescript": "^2.0.10",
+    "webpack": "^1.13.3"
+  },
+  "scripts": {
+    "preinstall": "npm init",
+    "postinstall": "npm run transpile && npm run webpack",
+    "transpile": "tsc",
+    "webpack": "webpack",
+    "transpile_w": "tsc -w",
+    "webpack_w": "webpack -w",
+    "start_server": "nodemon .\\dist\\server\\main.js",
+    "dev": "concurrently -p \" {name} |\" -n \"TSC\t,Webpack,Node\t\" -c \"bgCyan.bold,bgMagenta.bold,bgBlue.bold\" \"npm run transpile_w\" \"npm run webpack_w\" \"npm run start_server\""
+  },
+  "version": "0.0.0",
+  "build": "dev",
+  "main": "dist\\main.js",
+  "license": "SEE LICENSE IN LICENSE.TXT"
+}

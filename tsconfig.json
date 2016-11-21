@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+        "target": "es2015",
+        "module": "commonjs",
+        "moduleResolution": "node",
+        
+        "rootDirs": ["./src/public", "./src/server"],
+        "outDir": "./dist/",
+
+        "noImplicitAny": true,
+        "removeComments": true,
+        "strictNullChecks": true,
+        "allowJs": false,
+        "allowUnreachableCode": false,
+        "inlineSourceMap": true,
+        "preserveConstEnums": true
+    },
+
+    "exclude": [
+        "node_modules"
+    ]
+}
