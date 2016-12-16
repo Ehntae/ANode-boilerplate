@@ -47,10 +47,10 @@ server.listen(PORT_NUMBER, function() {
 
 function main():void {
     
-    console.log(`Initialising server: V${APP_VERSION}-${APP_BUILD}`);
+    console.log(`Initialising server: v${APP_VERSION}-${APP_BUILD}`);
     
-    // Start engine...
-    
+    // Start engine... 
+
 }
 
 main();
